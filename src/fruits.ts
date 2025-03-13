@@ -50,11 +50,16 @@ const fruits: Fruit[] = [
  * Example:
  *  getFruitColor(fruits[0]); // => "Red"
  */
-function getFruitColor(fruit: Fruit): string {
-  // write your code here...
 
+function getFruitColor(fruit: Fruit): string {
   return fruit.color;
 }
+
+// function getFruitColor(fruit: Fruit): string {
+//   // write your code here...
+
+//   return fruit.color;
+// }
 
 /**
  * `isFruitTasteMatching` function:
@@ -66,12 +71,16 @@ function getFruitColor(fruit: Fruit): string {
  *  isFruitTasteMatching(fruits[2], "Citrusy"); // => true
  */
 function isFruitTasteMatching(fruit: Fruit, taste: string): boolean {
-  // write your code here...
-  if (fruit.taste == taste) {
-    return true;
-  }
-  return false;
+  return fruit.taste == taste ? true : false;
 }
+
+// function isFruitTasteMatching(fruit: Fruit, taste: string): boolean {
+//   // write your code here...
+//   if (fruit.taste == taste) {
+//     return true;
+//   }
+//   return false;
+// }
 
 /**
  * `addFruit` function:
@@ -98,11 +107,23 @@ function addFruit(
   color: string,
   taste: string
 ): Fruit[] {
-  // write your code here...
   const newFruit: Fruit = { id, name, color, taste };
   fruits.push(newFruit);
   return fruits;
 }
+
+// function addFruit(
+//   fruits: Fruit[],
+//   id: number,
+//   name: string,
+//   color: string,
+//   taste: string
+// ): Fruit[] {
+//   // write your code here...
+//   const newFruit: Fruit = { id, name, color, taste };
+//   fruits.push(newFruit);
+//   return fruits;
+// }
 
 /**
  * `countSweetFruits` function:
@@ -113,11 +134,15 @@ function addFruit(
  *  countSweetFruits(fruits); // => 3
  */
 function countSweetFruits(fruits: Fruit[]): number {
-  // write your code here...
-  // const sweetfruist = fruits.filter((fruit) => fruit.taste === "sweet").length;
-  // return sweetfruist;
-  return fruits.filter((fruit) => fruit.taste === "sweet").length;
+  return fruits.filter((fruit) => fruit.taste === "Sweet").length;
 }
+
+// function countSweetFruits(fruits: Fruit[]): number {
+//   // write your code here...
+//   // const sweetfruist = fruits.filter((fruit) => fruit.taste === "sweet").length;
+//   // return sweetfruist;
+//   return fruits.filter((fruit) => fruit.taste === "sweet").length;
+// }
 
 export {
   Fruit,
